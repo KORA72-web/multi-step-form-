@@ -1,0 +1,730 @@
+h1{
+    color: var(--marine-blue);
+  }
+  .container{
+    position: relative;
+    background-color: var(--white);
+    display: flex;
+    gap:2rem;
+    width: 90%;
+    max-width: 900px;
+    height: 70vh;
+    padding: 1.5rem;
+    margin-left:20%;
+    margin-top: 10%;
+    border-radius: 20px;
+  }
+  /* =========SIDEBAR======== */
+  .container .sidebar{
+    background-repeat:no-repeat;
+    width: 65%;
+    border-radius: 25px;
+    color: var(--white);
+  }
+  .container .sidebar ul {
+    list-style: none;
+    position: absolute;
+    z-index: 1;
+    top: 2rem;
+  }
+  .container .sidebar ul li{
+    display: flex;
+    text-transform: uppercase;
+    
+  }
+  .container .sidebar ul li .num{
+    box-sizing: border-box;
+    margin-top: 1.1rem;
+    margin-right: 1.3rem;
+    height: 30px;
+    width: 30px;
+    border: 1px solid var(--white);
+    padding:.4rem .6rem;
+    border-radius: 50%;
+    transition:background-color 200ms ease-in ;
+  }
+  .container .sidebar ul li .num.active{
+  background-color:var(--light-blue);
+  color: var(--marine-blue);
+  }
+  .container .sidebar ul li p{
+    font-weight:500;
+    font-size: 14px;
+  }
+  .container .sidebar ul li .step_num{
+    color: var(--light-gray);
+    font-weight: 400;
+  }
+  /* forms */
+  .forms{
+    width: 100%;
+  }
+  
+  /*=====STEP ONE================= */
+  #form1{
+    color:var(--marine-blue);
+    width: 90%;
+  }
+  #form1 h1{
+  font-weight: 700;
+  }
+  #form1 p{
+  color:var(--cool-gray);
+  }
+  .error1,
+  .error2,
+  .error3
+  {
+    color: var(--strawberry-red);
+    float: right;
+    display: none;
+  }
+  #form1 input{
+    width: 100%;
+    margin-bottom: 2rem;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid var(--cool-gray) ;
+    outline: none;
+    padding-left: 1rem;
+    font-size: 16px;
+  }
+  #form1 input:focus{
+    border:1px solid var(--purplish-blue) ;
+  }
+  #form1 input[type="button"]{
+   float: right;
+   width: 100%;
+    max-width: 110px; 
+    border: none;
+    background-color: var(--marine-blue);
+    color: var(--white);
+    padding-right: 1rem;
+    transition: background-color 200ms ease-in;
+    cursor: pointer;
+    font-size:16px;
+    margin-top: 5rem;
+  }
+  #form1 input[type="button"]:hover{
+    background-color: color-mix(in srgb, var(--white) 20%, var(--marine-blue) 80%);
+  }
+  #form1 input[type="number"]::-webkit-inner-spin-button,
+  #form1 input[type="number"]::-webkit-outer-spin-button{
+   -webkit-appearance: none; 
+  }
+  /*=====STEP TWO================= */
+  #form2{
+     display: none;
+    color:var(--marine-blue);
+    width: 100%;
+  }
+  #form2 p{
+    color: var(--cool-gray);
+  }
+  .boxes{
+  display: flex;
+  gap: 1rem;
+  }
+  /* box1  */
+  .boxes .box1{
+    box-sizing: border-box;
+    padding: 1rem;
+    width: 150px;
+    border: 2px solid var(--light-gray);
+    height: 160px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 400ms ease-in;
+  }
+  .boxes .box1.selected{
+    background-color:var(--magnolia) ;
+    border: 2px solid var(--purplish-blue);
+  }
+  .boxes .box1:hover{
+    border: 2px solid var(--purplish-blue);
+  }
+  #form2 .boxes .box1 p[class~="type"]{
+    margin-top: 2rem;
+    color:var(--marine-blue);
+  }
+  #form2 .boxes .box1 p[class~="price1"]{
+    margin-top: -1rem;
+  }
+  #form2 .boxes .box1 p[class~="discount"]{
+    color: var(--marine-blue);
+    font-weight: 500;
+    margin-top: -1rem;
+    font-size: 14px;
+    }
+  /* box2 */
+  .boxes .box2{
+    box-sizing: border-box;
+    padding: 1rem;
+    width: 150px;
+    border: 2px solid var(--light-gray);
+    height: 160px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 400ms ease-in;
+  }
+  .boxes .box2.selected{
+    background-color:var(--magnolia) ;
+    border: 2px solid var(--purplish-blue);
+  }
+  .boxes .box2:hover{
+    border: 2px solid var(--purplish-blue);
+  }
+  #form2 .boxes .box2 p[class~="type"]{
+    margin-top: 2rem;
+    color:var(--marine-blue);
+  }
+  #form2 .boxes .box2 p[class~="price2"]{
+    margin-top: -1rem;
+  }
+  #form2 .boxes .box2 p[class~="discount1"]{
+  color: var(--marine-blue);
+  font-weight: 500;
+  margin-top: -1rem;
+    font-size: 14px;
+  }
+  /* box3 */
+  .boxes .box3{
+    box-sizing: border-box;
+    padding: 1rem;
+    width: 150px;
+    border: 2px solid var(--light-gray);
+    height: 160px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 400ms ease-in;transition: background-color 400ms ease-in;
+  }
+  .boxes .box3.selected{
+    background-color:var(--magnolia) ;
+    border: 2px solid var(--purplish-blue);
+  }
+  .boxes .box3:hover{
+    border: 2px solid var(--purplish-blue);
+  }
+  #form2 .boxes .box3 p[class~="type"]{
+    margin-top: 2rem;
+    color:var(--marine-blue);
+  }
+  #form2 .boxes .box3 p[class~="price3"]
+  {
+    margin-top: -1rem;
+  }
+  #form2 .boxes .box3 p[class~="discount2"]{
+    color: var(--marine-blue);
+    font-weight: 500;
+    margin-top: -1rem;
+    font-size: 14px;
+    }
+  
+  /* Bar and Toggle */
+  .bar{
+    width:100%;
+    background-color:var(--light-gray);
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    border-radius: 12px;
+  }
+  #form2 .bar .monthly.current{
+    color: var(--marine-blue);
+    font-weight: 500;
+  }
+  #form2 .bar .yearly.current{
+    color: var(--marine-blue);
+    font-weight: 500;
+  }
+  #form2 .bar .toggle input{
+    display: none;
+  }
+  #form2 .bar .toggle  label{
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 23px;
+  border: 1px solid;
+  border-radius: 10px;
+  background-color: var(--marine-blue);
+  cursor: pointer;
+  }
+  #form2 .bar .toggle  label:after{
+    content: "";
+    position: absolute;
+    background-color: var(--white);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    top: .15rem;
+    left:.1rem;
+    transition: left 400ms ease-in;
+  }
+  #form2 .bar .toggle:has(input:checked ) label:after{
+  left: 31px;
+  }
+  
+  #form2 .navigation{
+    margin-top: 9rem;
+  }
+  #form2 .navigation >span,
+  #form3 .navigation >span{
+    color: var(--cool-gray);
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 18px;
+  }
+  #form2 .navigation >span:hover,
+  #form3 .navigation >span:hover
+  {
+  color: var(--marine-blue);
+  }
+  #form2 .navigation input[type="button"],
+  #form3 .navigation input[type="button"]
+  {
+    box-sizing: border-box;
+    float: right;
+    width: 100%;
+    max-width: 110px; 
+    border: none;
+    background-color: var(--marine-blue);
+    color: var(--white);
+    padding: .5rem;
+    height: 40px;
+    transition: background-color 200ms ease-in;
+    cursor: pointer;
+    font-size:16px;
+    border-radius: 5px;
+    margin-top: -1rem;
+    margin-right: 3rem;
+  }
+  #form2 .navigation input[type="button"]:hover,
+  #form3 .navigation input[type="button"]:hover
+  {
+    background-color: color-mix(in srgb, var(--white) 20%, var(--marine-blue) 80%);
+  }
+  
+  
+  /*=====STEP THREE================= */
+  #form3{
+    display: none;
+  }
+  #form3 p{
+    color: var(--cool-gray);
+  }
+  #form3 .ad_box{
+    padding: .5rem 1rem;
+    display: flex;
+  border: 1px solid var(--light-gray);
+  justify-content: space-between;
+  border-radius: 8px;
+  width: 80%;
+  height:60px;
+  margin-top: 1rem;
+  cursor: pointer;
+  }
+  #form3 .ad_box:hover{
+    border: 2px solid var(--purplish-blue);
+  }
+  #ad_box1.current{
+    background-color:var(--magnolia) ;
+    border: 2px solid var(--purplish-blue);
+    
+  }
+  #ad_box2.current{
+    background-color:var(--magnolia) ;
+    border: 2px solid var(--purplish-blue);
+  }
+  #ad_box3.current{
+    background-color:var(--magnolia) ;
+    border: 2px solid var(--purplish-blue);
+  }
+  #form3 .ad_box input{
+    width: 20px;
+    cursor: pointer;
+  }
+  #form3 .ad_box p{
+    color: var(--marine-blue);
+    font-weight: 700;
+    margin-right: 3rem;
+  }
+  #form3 .ad_box p>span{
+    color: var(--cool-gray);
+    font-weight: 300;
+    font-size: 14px;
+  }
+  #form3 .ad_box .ad_amount1,
+  #form3 .ad_box .ad_amount2,
+  #form3 .ad_box .ad_amount3
+  {
+    color: var(--purplish-blue);
+    margin-top: 2rem;
+    float: right;
+  }
+  #form3 .navigation{
+    margin-top: 8rem;
+  }
+  
+  /*=====STEP FOUR================= */
+  #form4{
+    display: none;
+  }
+  #form4 p{
+    color: var(--cool-gray);
+  }
+  .finish_container{
+    background-color: var(--magnolia);
+    margin-top:2rem;
+    padding: 1rem;
+    width: 80%;
+    border-radius: 9px;
+  }
+  #form4 .finish_container p[class~="plan"]{
+    color: var(--marine-blue);
+    font-weight: 700;
+   }
+   #form4 .finish_container p[class~="plan"] .plan_amount{
+  float: right;
+   } 
+   #form4 .finish_container hr{
+    color: var(--cool-gray);
+   }
+   #form4 .finish_container p[class~="change"] {
+    text-decoration: underline;
+    margin-top: -1rem;
+    cursor: pointer;
+   }
+   #form4 .finish_container p[class~="change"]:hover{
+    color: var(--purplish-blue);
+    font-weight: 500;
+   }
+   #form4 .finish_container .add_ons{
+    margin-top: 1.5rem;
+    width: 100%;
+   }
+   #form4 .finish_container .add_ons .add_on1 .addon1_amount,
+   #form4 .finish_container .add_ons .add_on2 .addon2_amount,
+   #form4 .finish_container .add_ons .add_on3 .addon3_amount
+   {
+    float: right;
+    color: var(--marine-blue);
+    font-weight: 500;
+   }
+  
+   #form4 p[class~="total"]{
+    margin-top: 2.5rem;
+    width: 85%;
+   }
+   #form4 p[class~="total"] .total_amount{
+    float: right;
+   color: var(--purplish-blue);
+   font-weight: 700;
+   font-size: 18px;
+   }
+  #form4 .navigation{
+    margin-top: 7.5rem;
+    font-size: 18px;
+  } 
+  #form4 .navigation input[type="submit"]{
+    box-sizing: border-box;
+    float: right;
+    width: 100%;
+    max-width: 110px; 
+    border: none;
+    background-color: var(--purplish-blue);
+    color: var(--white);
+    padding: .5rem;
+    height: 40px;
+    transition: background-color 200ms ease-in;
+    cursor: pointer;
+    font-size:18px;
+    border-radius: 5px;
+    margin-top: -1rem;
+    margin-right: 3rem;
+  }
+  #form4 .navigation input[type="submit"]:hover{
+    background-color: color-mix(in srgb, var(--white) 50%, var(--purplish-blue) 50%);
+  }
+  #form4 .navigation >span{
+    color: var(--cool-gray);
+    cursor: pointer;
+  }
+  #form4 .navigation >span:hover
+  {
+  color: var(--marine-blue);
+  }
+  /*=====STEP FIVE================= */
+  #form5{
+    display: none;
+    padding: 9rem 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 81%;
+    text-align: center;
+  }
+  #form5 h1{
+  font-weight: 700;
+  }
+  #form5 p{
+  color: var(--cool-gray);
+  }
+  @media screen and (max-width:992px){
+  .container{
+    margin-left: 0;
+    gap: 1rem; 
+  }
+  .container .sidebar{
+    width: 80%;
+  }
+  }
+  /* ============mobile phone============= */
+  @media screen and (max-width:376px){
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  body{
+    background-color: var(--white);
+  }
+    .container{
+    display: block;
+    margin-top: 0;
+    padding: 0;
+    background-color: var(--magnolia);
+    /* width: 100%; */
+    height: 590px;
+    border-radius:0px;
+    }
+    .container .sidebar{
+      background-size: contain;
+      width: 100%;
+      border-radius: 0;
+      height: 400px;
+      max-width: 500px;
+    }
+    .container .sidebar ul{
+      display: flex;
+      width: 100%;
+      margin-left: 6rem;
+    }
+    .container .sidebar ul li p{
+      display: none;
+    }
+    .container .sidebar ul li .num{
+      box-sizing: border-box;
+      margin-top: 1.6rem;
+      margin-right: .8rem;
+      height: 30px;
+      width: 30px;
+      padding:.4rem .6rem;
+      font-size: 14px;
+    }
+    .forms{
+      margin-top: -70.5%;
+      padding: .3rem;
+      margin-left: 1rem;
+      position: absolute;
+    }
+    h1{
+      font-size: 20px;
+    }
+    p{
+      font-size:12px;
+    }
+    /* form1 */
+    #form1{
+      box-sizing: border-box;
+      background-color: var(--white);
+      border-radius: 12px;
+      padding: 2rem;
+      height: 350px;
+    
+    }
+    #form1 input{
+      height: 34px;
+      margin-bottom: 1rem;
+      font-size: 12px;
+    }
+   
+    #form1 p{
+      margin-bottom: 1rem;
+      margin-top: .3rem;
+    }
+    #form1 label{
+      font-size: 14px;
+    }
+    #form1 input[type="button"]{
+      position: absolute;
+      top: 405px;
+      left: 15rem;
+    }
+    /* form2 */
+    #form2,
+    #form3,
+    #form4,
+    #form5
+    {
+      background-color:var(--white) ;
+    }
+    #form2{
+      padding:1rem;
+      max-width: 310px;
+      border-radius: 12px;
+      height: 400px;
+    }
+    .boxes{
+      flex-direction: column;
+      gap: 0;
+    }
+    .boxes .box1,
+    .boxes .box2,
+    .boxes .box3{
+  display: flex;
+  gap: 1rem;
+  height: 80px;
+  width: 300px;
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+    }
+    #form2 .boxes .box1 p[class~="type"],
+    #form2 .boxes .box1 p[class~="price1"],
+  #form2 .boxes .box1 p[class~="discount"]{ 
+    width: 100%;
+    font-size: 16px;
+    margin-top: -.107rem;
+  }
+    #form2 .boxes .box2 p[class~="type"],
+    #form2 .boxes .box2 p[class~="price2"],
+  #form2 .boxes .box2 p[class~="discount1"]{ 
+    width: 100%;
+    font-size: 16px;
+    margin-top: -.107rem;
+  }
+  p[class~="type"]{
+    font-weight: 700;
+  }
+    #form2 .boxes .box3 p[class~="type"],
+    #form2 .boxes .box3 p[class~="price3"],
+  #form2 .boxes .box3 p[class~="discount2"]{ 
+    width: 100%;
+    font-size: 16px;
+    margin-top: -.107rem;
+  }
+  #form2 .boxes .box1 p[class~="discount"],
+  #form2 .boxes .box2 p[class~="discount1"],
+  #form2 .boxes .box3 p[class~="discount2"]{
+    font-size: 12px;
+  }
+  /* bar */
+  .bar{
+    height: 45px;
+    margin-top: 1rem;
+  }
+  #form2 .navigation >span,
+  #form3 .navigation >span,
+  #form4 .navigation >span{
+    position: absolute;
+    top: 490px;
+    left: 2rem;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  #form2 .navigation input[type="button"],
+  #form3 .navigation input[type="button"],
+  #form4 .navigation input[type="submit"]{
+    position: absolute;
+    top: 500px;
+    left: 15rem;
+    font-size: 16px;
+  }
+  /* form3 */
+  #form3{
+    padding: 1rem;
+    max-width: 315px;
+    border-radius: 12px;
+    height: 350px;
+  }
+  #form3 .ad_box{
+    width: 90%;
+  }
+  #form3 .ad_box p[class~="ad_name"]{
+   margin-top: 1rem;
+   margin-left: .5rem;
+    white-space: nowrap;
+    width: 60%;
+  }
+  #form3 .ad_box p{
+    font-size: 16px;
+  }
+  #form3 .ad_box .ad_amount2{
+    margin-left: 1rem;
+  }
+  
+  #form3 .ad_box .ad_amount1,
+  #form3 .ad_box .ad_amount2,
+  #form3 .ad_box .ad_amount3{
+    font-size: 14px;
+  }
+  /* #form4 */
+  #form4{
+    border-radius: 12px;
+    padding: 1.5rem;
+    height: 300px;
+    max-width: 300px;
+  }
+  .finish_container{
+    padding-top: 2rem;
+    width: 90%;
+  }
+  #form4 .finish_container p[class~="plan"]{
+   padding-bottom: 1rem;
+   
+   }
+   #form4 .finish_container .add_ons .add_on1,
+   #form4 .finish_container .add_ons .add_on2,
+   #form4 .finish_container .add_ons .add_on3
+   {
+    margin-bottom: 1rem;
+   }
+   #form4 .finish_container .add_ons .add_on1 .addon1_amount,
+   #form4 .finish_container .add_ons .add_on2 .addon2_amount,
+   #form4 .finish_container .add_ons .add_on3 .addon3_amount
+   {
+    font-size: 16px;
+    font-weight: 500;
+   }
+   #form4 p[class~="total"] .total_amount,
+   #form4 .finish_container p[class~="change"]{
+    font-size:17px;
+   }
+   #form4 .finish_container .plan,
+   #form4 p[class~="total"],
+   #form4 .finish_container .add_ons .add_on1 .addon1_name,
+   #form4 .finish_container .add_ons .add_on2 .addon2_name,
+   #form4 .finish_container .add_ons .add_on3 .addon3_name{
+    font-size: 16px;
+   }
+   #form4 p[class~="total"]{
+    width: 100%;
+   }
+   /* form 5(last form) */
+   #form5{
+    border-radius: 12px;
+    height:200px;
+    padding: 5rem 0rem;
+    width: 100%;
+    max-width: 340px;
+   }
+   #form5 .thanks_desc p{
+    width: 100%;
+    font-size: 16px;
+   white-space: pre-line;
+   }
+    .attribution{
+      display: none;
+    }
+  
+  }
