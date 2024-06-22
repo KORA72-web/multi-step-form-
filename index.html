@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./app/css/style.css">
+  <script defer src="./app/js/script.js"></script>
+  
+  <title>Frontend Mentor | Multi-step form</title>
+
+</head>
+<body>
+<div class="container">
+  <div class="sidebar">
+    <div class="svgContainer" id="svg-container">
+      <svg xmlns="http://www.w3.org/2000/svg" width="274" height="568" fill="none" viewBox="0 0 274 568"><rect width="274" height="568" fill="#483EFF" rx="10"/><mask id="a" width="274" height="568" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha"><rect width="274" height="568" fill="#fff" rx="10"/></mask><g mask="url(#a)"><path fill="#6259FF" fill-rule="evenodd" d="M-34.692 543.101C3.247 632.538 168.767 685.017 211.96 612.52c43.194-72.497-66.099-85.653-104.735-160.569-38.635-74.916-68.657-121.674-124.482-104.607-55.824 17.068-55.375 106.32-17.436 195.757Z" clip-rule="evenodd"/><path fill="#F9818E" fill-rule="evenodd" d="M233.095 601.153c60.679-28.278 92.839-143.526 41.875-171.528-50.965-28.003-57.397 47.579-108.059 75.987-50.662 28.408-82.14 50.207-69.044 88.241 13.096 38.034 74.549 35.578 135.228 7.3Z" clip-rule="evenodd"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="5" d="m165.305 469.097 10.607-10.806M209.461 474.581l-12.506-10.503M187.56 488.991l-6.908 14.798"/><path fill="#FFAF7E" d="M.305 546.891c37.003 0 67-29.997 67-67s-29.997-67-67-67-67 29.997-67 67 29.997 67 67 67Z"/></g></svg>
+    </div>
+    <div class="steps">
+      <ul class="step_links">
+        <li>
+        <div class="num active" id="num">1</div>
+        <div class="step_name"><span>step1</span> <br>
+          your info
+        </div>
+      </li>
+     <li>
+        <div class="num1" id="num1">2</div>
+        <div class="step_name"><span>step2 </span>
+          <br>select plan
+        </div>
+      </li>
+      <li>
+        <div class="num2" id="num2">3</div>
+        <div class="step_name"><span>step3</span> <br>
+              add-ons
+        </div>
+      </li>
+      <li>
+        <div class="num3" id="num3">4</div>
+        <div class="step_name"> <span>step4</span>
+          <br>summary
+        </div>
+      </li>
+      </ul>
+     
+    </div>
+  </div>
+  <div class="forms">
+    <!-- form1 start -->
+    <div class="form1" id="form1">
+      <h1>Personal info</h1>
+      <p>Please provide your name,email
+        address,and phone number
+      </p>
+      <div class="input">
+      <label for="name">Name<span class="error1">This field is required</span></label>
+      <input type="text" name="name" id="name"placeholder="e.g.Stephen King"required/>
+      
+      </div>
+
+      <div class="input">
+      <label for="email">Email Address<span class="error2">2</span></label>
+      <input type="email" name="email" id="email"placeholder="e.g.stephenking@lorem.com"required/>
+      </div>
+
+      <div class="input">     <label for="name">Phone Number<span class="error3"></span></label>
+      <input type="number" name="phoneNumber" id="phoneNumber"placeholder="e.g. +1 234 567 890"required/>
+    </div>
+ 
+      <button id="next(1)">Next Step</button>
+    </div>
+<!-- form 1 end -->
+    <!--form 2 start -->
+    <div class="form2" id="form2">
+<h1> Select your plan</h1>
+<p>You have the option of monthly or yearly billing.</p>
+<div class="boxes">
+  <div class="box1 selected"
+  id="arcade_box">
+    <div class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><g fill="none" fill-rule="evenodd"><circle cx="20" cy="20" r="20" fill="#FFAF7E"/><path fill="#FFF" fill-rule="nonzero" d="M24.995 18.005h-3.998v5.998h-2v-5.998H15a1 1 0 0 0-1 1V29a1 1 0 0 0 1 1h9.995a1 1 0 0 0 1-1v-9.995a1 1 0 0 0-1-1Zm-5.997 8.996h-2v-1.999h2v2Zm2-11.175a2.999 2.999 0 1 0-2 0v2.18h2v-2.18Z"/></g></svg>
+    </div>
+    <div class="desc">
+    <p class="type">Arcade</p>
+    <p class="price1">$9/mo</p>
+    <p class="discount"></p>
+    </div>
+  </div>
+
+  <div class="box2"id="advanced_box" >
+    <div class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><g fill="none" fill-rule="evenodd"><circle cx="20" cy="20" r="20" fill="#F9818E"/><path fill="#FFF" fill-rule="nonzero" d="M25.057 15H14.944C12.212 15 10 17.03 10 19.885c0 2.857 2.212 4.936 4.944 4.936h10.113c2.733 0 4.943-2.08 4.943-4.936S27.79 15 25.057 15ZM17.5 20.388c0 .12-.108.237-.234.237h-1.552v1.569c0 .126-.138.217-.259.217H14.5c-.118 0-.213-.086-.213-.203v-1.583h-1.569c-.126 0-.217-.139-.217-.26v-.956c0-.117.086-.213.202-.213h1.584v-1.554c0-.125.082-.231.203-.231h.989c.12 0 .236.108.236.234v1.551h1.555c.125 0 .231.083.231.204v.988Zm5.347.393a.862.862 0 0 1-.869-.855c0-.472.39-.856.869-.856.481 0 .87.384.87.856 0 .471-.389.855-.87.855Zm1.9 1.866a.86.86 0 0 1-.87-.852.86.86 0 0 1 .87-.855c.48 0 .87.38.87.855a.86.86 0 0 1-.87.852Zm0-3.736a.862.862 0 0 1-.87-.854c0-.472.39-.856.87-.856s.87.384.87.856a.862.862 0 0 1-.87.854Zm1.899 1.87a.862.862 0 0 1-.868-.855c0-.472.389-.856.868-.856s.868.384.868.856a.862.862 0 0 1-.868.855Z"/></g></svg>
+    </div>
+    <div class="desc">
+    <p class="type"> Advanced</p>
+    <p class="price2">$12/mo</p>
+    <p class="discount1"></p>
+  </div>
+  </div>
+
+  <div class="box3" id="pro_box">
+    <div class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><g fill="none" fill-rule="evenodd"><circle cx="20" cy="20" r="20" fill="#483EFF"/><path fill="#FFF" fill-rule="nonzero" d="M26.666 13H13.334A3.333 3.333 0 0 0 10 16.333v7.193a3.447 3.447 0 0 0 2.14 3.24c1.238.5 2.656.182 3.56-.8L18.52 23h2.96l2.82 2.966a3.2 3.2 0 0 0 3.56.8 3.447 3.447 0 0 0 2.14-3.24v-7.193A3.333 3.333 0 0 0 26.666 13Zm-9.333 6H16v1.333a.667.667 0 0 1-1.333 0V19h-1.333a.667.667 0 0 1 0-1.334h1.333v-1.333a.667.667 0 1 1 1.333 0v1.333h1.333a.667.667 0 1 1 0 1.334Zm7.333 2a2.667 2.667 0 1 1 0-5.333 2.667 2.667 0 0 1 0 5.333ZM26 18.333a1.333 1.333 0 1 1-2.667 0 1.333 1.333 0 0 1 2.667 0Z"/></g></svg>
+    </div>
+    <div class="desc">
+    <p class="type"> Pro</p>
+    <p class="price3">$15/mo</p>
+    <p class="discount2"></p>
+    </div>
+  </div>
+</div>
+
+<div class="bar">
+  <p class="monthly ">Monthly</p>
+  <div class="toggle">
+    <input type="checkbox" name="check" id="check">
+    <label for="check" id="toggleBtn"></label>
+  </div>
+  <p class="yearly activate">Yearly</p>
+</div>
+
+<p class="footer">
+<span id="back(1)">Go Back</span>
+<button id="next(2)">Next Step</button>
+</p>
+    </div>
+    <!-- form 2 end -->
+    <!-- form3 start -->
+    <div class="form3" id="form3">
+      <h1>Pick add-ons</h1>
+      <p>Add-ons help enhance your gaming experience.</p>
+      <div class="ad_box1 current" id="ad_box1">
+      <div class="checkbox">
+        <input type="checkbox" checked name="" id="online">
+      </div>
+      <div class="ad_desc">
+        <p class="legend" style="color: var(--marine-blue);
+        font-weight: 700;">Online services</p>
+        <p class="follow">Access to multiplayer games</p>
+      </div>
+      <div class="ad_amount1">+$1/mo</div>
+    </div>
+
+      <div class="ad_box1 current" id="ad_box2">
+      <div class="checkbox">
+        <input type="checkbox" checked name="" id="storage">
+      </div>
+      <div class="ad_desc">
+        <p class="legend" style="color: var(--marine-blue);
+        font-weight: 700;">Larger storage</p>
+        <p class="follow" >Extra 1TB of cloud save     </p>
+      </div>
+      <div class="ad_amount2">+$2/mo</div>
+    </div>
+
+      <div class="ad_box1" id="ad_box3">
+      <div class="checkbox">
+        <input type="checkbox" name="" id="customize">
+      </div>
+      <div class="ad_desc">
+        <p class="legend"style="color: var(--marine-blue);
+        font-weight: 700;">Customizable profile</p>
+        <p class="follow">Custom theme on your profile</p>
+      </div>
+      <div class="ad_amount3">+$2/mo</div>
+    </div>
+
+    <p class="footer">
+      <span id="back(2)">Go Back</span>
+      <button id="next(3)">Next Step</button>
+      </p>
+    </div>
+    <!-- form 3 end -->
+    <!-- form4 start -->
+    <div class="form4" id="form4">
+      <h1>Finishing up</h1>
+      <p>Double-check evrything looks OK before confirming</p>
+      <div class="finish_container">
+        <p class="plan"><span class="plan_Name">Arcade</span><span class="period">(Monthly)</span>  <span class="plan_amount" id="plan_amount">$9/mo</span></p>
+        <p class="change" id="change" onclick="step2()">Change</p>
+        <hr>
+        <div class="add_ons">
+          <p class="add_on1">
+            <span class="addon1_name">Online service</span>
+            <span class="addon1_amount" id="addon1_amount">+$1/mo</span>
+          </p>
+      
+          <p class="add_on2">
+            <span class="addon2_name">Larger storage</span>
+             <span class="addon2_amount" id="addon2_amount">+$2/mo</span>
+          </p>
+          <p class="add_on3">
+            <span class="addon3_name"></span>
+             <span class="addon3_amount" id="addon3_amount"></span>
+            </p>
+        </div>    
+            </div>
+            <p class="total">Total <span class="total_period">(per month)</span><span class="total_amount" id="total_amount">+$12/mo</span></p>
+            
+            <p class="footer">
+              <span id="back(3)">Go Back</span>
+              <button id="next(4)">Confirm</button>
+              </p>
+
+    </div>
+    <!-- form4 end -->
+    <!-- form5 start -->
+    <div class="form5" id="form5">
+
+      <div class="thanks">
+        <div class="svg">
+          <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80"><g fill="none"><circle cx="40" cy="40" r="40" fill="#F9818E"/><path fill="#E96170" d="M48.464 79.167c.768-.15 1.53-.321 2.288-.515a40.04 40.04 0 0 0 3.794-1.266 40.043 40.043 0 0 0 3.657-1.63 40.046 40.046 0 0 0 12.463-9.898A40.063 40.063 0 0 0 78.3 51.89c.338-1.117.627-2.249.867-3.391L55.374 24.698a21.6 21.6 0 0 0-15.332-6.365 21.629 21.629 0 0 0-15.344 6.365c-8.486 8.489-8.486 22.205 0 30.694l23.766 23.775Z"/><path fill="#FFF" d="M40.003 18.333a21.58 21.58 0 0 1 15.31 6.351c8.471 8.471 8.471 22.158 0 30.63-8.47 8.47-22.156 8.47-30.627 0-8.47-8.472-8.47-22.159 0-30.63a21.594 21.594 0 0 1 15.317-6.35Zm9.865 15c-.316.028-.622.15-.872.344l-12.168 9.13-5.641-5.642c-1.224-1.275-3.63 1.132-2.356 2.356l6.663 6.663c.56.56 1.539.63 2.173.156l13.326-9.995c1.122-.816.43-2.993-.956-3.013a1.666 1.666 0 0 0-.17 0Z"/></g></svg>
+        </div>
+        <div class="thanks_desc">
+          <h1> Thank you!</h1>
+          <p>Thanks for confirming your subscription!
+             We hope you have fun  using our platform.
+              If you ever need support,
+               please feel free to email us at 
+               support@loremgaming.com.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- form5 end -->
+
+  <!-- ==============THE END========== -->
+  
+  <div class="navigation"></div>
+</div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
+    Coded by <a href="https://github.com/KORA72-web" target="_blank4">David Annor</a>
+  </div>
+
+</body>
+</html>
